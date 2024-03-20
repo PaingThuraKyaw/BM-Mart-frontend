@@ -2,7 +2,7 @@
 const ForSale = () => {
   return (
     <div>
-      
+      For Sale
     </div>
   )
 }

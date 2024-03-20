@@ -1,5 +1,7 @@
 const Order = () => {
-  return <div></div>;
+  return <div>
+    Order
+  </div>;
 };
 
 export default Order;

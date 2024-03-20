@@ -2,7 +2,7 @@
 const CustomerChat = () => {
   return (
     <div>
-      
+      Customer Chat
     </div>
   )
 }

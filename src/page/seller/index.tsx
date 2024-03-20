@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
 
 const Seller = () => {
-  const [opened, { toggle }] = useDisclosure();
+  const [opened,  { toggle } ] = useDisclosure();
 
   return (
     <>
@@ -30,7 +30,7 @@ const Seller = () => {
           </Flex>
         </AppShell.Header>
         <AppShell.Navbar p={"md"}>
-          <Navbar />
+          <Navbar closed={toggle} />
         </AppShell.Navbar>
         <AppShell.Main>
           <Suspense fallback={<h1>Loading...</h1>}>
