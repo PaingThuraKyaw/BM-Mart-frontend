@@ -2,21 +2,21 @@ import { IconBasket, IconCategory } from "@tabler/icons-react";
 
 export const sellerNavLink = [
   {
-    link: "item",
+    link: "/seller",
     title: "Item",
     icon: <IconCategory />,
   },
   {
-    link: "for-sale",
+    link: "/seller/for-sale",
     title: "For Sale",
     icon: <IconBasket />,
   },
   {
-    link: "order",
+    link: "/seller/order",
     title: "Order",
   },
   {
-    link: "chat",
-    title: "Chat",
+    link: "/seller/customer-chat",
+    title: "Customer Chat",
   },
 ];

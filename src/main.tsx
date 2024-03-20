@@ -9,7 +9,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import Router from "./router.tsx";
-import "./style/global.css";
+import "./style/global.module.css";
 import "@mantine/core/styles.css";
 
 const router = createBrowserRouter(

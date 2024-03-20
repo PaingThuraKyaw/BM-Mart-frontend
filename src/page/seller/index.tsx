@@ -1,6 +1,8 @@
 import { AppShell, Burger, Flex } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Navbar from "./components/seller-nav";
+import { Outlet } from "react-router-dom";
+import { Suspense } from "react";
 
 const Seller = () => {
   const [opened, { toggle }] = useDisclosure();
@@ -30,7 +32,11 @@ const Seller = () => {
         <AppShell.Navbar p={"md"}>
           <Navbar />
         </AppShell.Navbar>
-        <AppShell.Main>Main</AppShell.Main>
+        <AppShell.Main>
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <Outlet />
+          </Suspense>
+        </AppShell.Main>
       </AppShell>
     </>
   );
