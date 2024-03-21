@@ -1,8 +1,9 @@
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
+import Loading from "./components/Loading";
 
 // Lazy Loading
-const Home = lazy(() => import("./page/Home"));
+const User = lazy(() => import("./page/User"));
 const Seller = lazy(() => import("./page/seller"));
 const Item = lazy(() => import("./page/seller/page/item"));
 const ForSale = lazy(() => import("./page/seller/page/for-sale"));
@@ -11,10 +12,10 @@ const CustomerChat = lazy(() => import("./page/seller/page/customer-chat"));
 
 const Router = () => {
   return (
-    <Suspense fallback={<h1>Loading...</h1>}>
+    <Suspense fallback={<Loading />}>
       <Routes>
-        <Route path="/" element={<Home />} index />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<User />} index />
+        <Route path="/user" element={<User />} />
         <Route path="/seller" element={<Seller />}>
           <Route index element={<Item />} />
           <Route path="/seller/for-sale" element={<ForSale />} />

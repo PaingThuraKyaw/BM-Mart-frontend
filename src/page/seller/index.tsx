@@ -3,9 +3,10 @@ import { useDisclosure } from "@mantine/hooks";
 import Navbar from "./components/seller-nav";
 import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
+import Loading from "../../components/Loading";
 
 const Seller = () => {
-  const [opened,  { toggle } ] = useDisclosure();
+  const [opened, { toggle }] = useDisclosure();
 
   return (
     <>
@@ -33,7 +34,7 @@ const Seller = () => {
           <Navbar closed={toggle} />
         </AppShell.Navbar>
         <AppShell.Main>
-          <Suspense fallback={<h1>Loading...</h1>}>
+          <Suspense fallback={<Loading />}>
             <Outlet />
           </Suspense>
         </AppShell.Main>
