@@ -1,11 +1,16 @@
 import { Container } from "@mantine/core";
-import { Link } from "react-router-dom";
+import { Suspense } from "react";
+import { Outlet } from "react-router-dom";
+import Loading from "../../components/Loading";
+import UserNavbar from "./components/nav-bar";
 
 const User = () => {
   return (
     <Container size={"xl"}>
-      <div>User</div>
-      <Link to={"/seller"}>Go to seller</Link>
+      <UserNavbar/>
+      <Suspense fallback={<Loading />}>
+        <Outlet />
+      </Suspense>
     </Container>
   );
 };

@@ -11,6 +11,8 @@ import {
 import Router from "./router.tsx";
 import "./style/global.module.css";
 import "@mantine/core/styles.css";
+import "@mantine/carousel/styles.css";
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(<Route path="/*" element={<Router />} />)
