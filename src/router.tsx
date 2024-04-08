@@ -4,7 +4,7 @@ import Loading from "./components/Loading";
 
 // Lazy Loading
 const User = lazy(() => import("./page/User"));
-const Home = lazy(() => import("./page/User/page/Home/hero-banner"));
+const Home = lazy(() => import("./page/User/page/Home"));
 
 const Router = () => {
   return (

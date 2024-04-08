@@ -8,7 +8,7 @@ const User = () => {
   return (
     <>
         <UserNavbar />
-      <Container size={"xl"}>
+      <Container mt={20} size={"xl"}>
         <Suspense fallback={<Loading />}>
           <Outlet />
         </Suspense>

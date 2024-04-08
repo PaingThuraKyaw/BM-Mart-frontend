@@ -24,7 +24,11 @@ export const userCategory = [
     title: "Baby & Toys",
   },
   {
-    link : 'health-beauty',
-    title : 'Health and Beauty'
-  }
+    link: "health-beauty",
+    title: "Health and Beauty",
+  },
+  {
+    link: "watch-accessories",
+    title: "Watch & Accessories",
+  },
 ];

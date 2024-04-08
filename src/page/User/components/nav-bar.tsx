@@ -1,16 +1,17 @@
 import {
+  Box,
   Container,
   Flex,
   Group,
   Input,
-  Title,
+  Text,
   UnstyledButton,
 } from "@mantine/core";
 import classes from "./style/nav-bar.module.css";
 import {
   IconHeart,
-  IconLock,
   IconShoppingCartSearch,
+  IconUserCircle,
 } from "@tabler/icons-react";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import UserLogin from "../../../components/user-login-model";
@@ -18,32 +19,47 @@ const UserNavbar = () => {
   const [opened, { open, close }] = useDisclosure(false);
   const media = useMediaQuery("(max-width: 600px)");
   return (
-    <>
-      <Container size={"xl"} py={15} mb={10}>
-        <Flex justify={"space-between"}>
-          <Title order={media ? 3 : 2}>BM Mart</Title>
-          <Flex align={media ? 'end' : 'center'} gap={8}>
+    <Box className={classes.nav}>
+      <Container size={"xl"} py={15} my={5}>
+        <Flex align={"center"} justify={"space-between"}>
+          <Box>Logo</Box>
+          <Flex align={media ? "end" : "center"} pos={"relative"} gap={8}>
             <Input
               leftSection={
                 <IconShoppingCartSearch size={18} style={{ marginLeft: 5 }} />
               }
-              size={media ? 'sm' : 'md'}
+              size={"md"}
               placeholder="Search your shop"
               classNames={{ input: classes.navInput }}
             />
-            <Group  align="center" gap={15}>
-              <UnstyledButton onClick={open}>
-                <IconLock size={media ? 18 : 25} />
+            <Group className={classes.footer} align="center" gap={15}>
+              <UnstyledButton
+                style={{
+                  display: media ? "flex" : "",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+                onClick={open}
+              >
+                <IconUserCircle size={media ? 30 : 25} />
+                {media && <Text size="sm">Log in</Text>}
               </UnstyledButton>
-              <UnstyledButton>
-                <IconHeart size={media ? 18 : 25} />
+              <UnstyledButton
+                style={{
+                  display: media ? "flex" : "",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <IconHeart size={media ? 30 : 25} />
+                {media && <Text size="sm">Favourite</Text>}
               </UnstyledButton>
             </Group>
           </Flex>
         </Flex>
       </Container>
       <UserLogin opened={opened} close={close} />
-    </>
+    </Box>
   );
 };
 
