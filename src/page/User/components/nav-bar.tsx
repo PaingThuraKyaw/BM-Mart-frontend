@@ -1,9 +1,10 @@
+import { Box } from "@mantine/core"
 
 const UserNavbar = () => {
   return (
-    <div>
+    <Box mb={10}>
       Navbar
-    </div>
+    </Box>
   )
 }
 

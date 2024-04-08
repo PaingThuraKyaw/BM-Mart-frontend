@@ -6,6 +6,18 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bm-yellow: rgb(232, 181, 0);
+  --bm-yellow-light: rgb(255, 200, 0);
+  --bm-orange: rgb(246, 173, 85);
+  --bm-blue: rgb(3, 155, 229);
+  --bm-red: rgb(216, 27, 96);
+}
+
+body {
+  background-color: rgb(255, 255, 255, 80%);
+}
+
 h1,
 h2,
 h3,
@@ -14,4 +26,27 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
