@@ -6,12 +6,14 @@ import UserNavbar from "./components/nav-bar";
 
 const User = () => {
   return (
-    <Container size={"xl"}>
-      <UserNavbar/>
-      <Suspense fallback={<Loading />}>
-        <Outlet />
-      </Suspense>
-    </Container>
+    <>
+        <UserNavbar />
+      <Container size={"xl"}>
+        <Suspense fallback={<Loading />}>
+          <Outlet />
+        </Suspense>
+      </Container>
+    </>
   );
 };
 
