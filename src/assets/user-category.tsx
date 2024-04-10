@@ -1,34 +1,34 @@
 export const userCategory = [
   {
-    link: "men-fashion",
+    link: "/men-fashion",
     title: "Men's Fashion",
   },
   {
-    link: "women-fashion",
+    link: "/women-fashion",
     title: "Women's Fashion",
   },
   {
-    link: "electronics",
+    link: "/electronics",
     title: "Electronics",
   },
   {
-    link: "medicine",
+    link: "/medicine",
     title: "Medicine",
   },
   {
-    link: "sport-outdoor",
+    link: "/sport-outdoor",
     title: "Sports & Outdoor",
   },
   {
-    link: "baby-toys",
+    link: "/baby-toys",
     title: "Baby & Toys",
   },
   {
-    link: "health-beauty",
+    link: "/health-beauty",
     title: "Health and Beauty",
   },
   {
-    link: "watch-accessories",
+    link: "/watch-accessories",
     title: "Watch & Accessories",
   },
 ];

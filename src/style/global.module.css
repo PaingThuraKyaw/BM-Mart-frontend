@@ -12,6 +12,7 @@
   --bm-orange: rgb(246, 173, 85);
   --bm-blue: rgb(3, 155, 229);
   --bm-red: rgb(216, 27, 96);
+  --bm-yellow-3: rgba(232, 182, 0, 0.1);
 }
 
 body {

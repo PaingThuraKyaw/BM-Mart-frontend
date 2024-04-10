@@ -58,3 +58,17 @@
     border-radius: 5px;
   }
 }
+
+.active {
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background-color: var(--bm-yellow-3);
+  color: var(--bm-yellow);
+  font-weight: 600;
+  backdrop-filter : opacity(0.1);
+
+  &:hover {
+    background-color: var(--bm-yellow);
+    color: white;
+  }
+}
