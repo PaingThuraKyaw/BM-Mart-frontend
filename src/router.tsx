@@ -6,6 +6,9 @@ import Loading from "./components/Loading";
 const User = lazy(() => import("./page/User"));
 const Product = lazy(() => import("./page/User/page/Product"));
 const ManFashion = lazy(() => import("./page/User/page/men-fashion"));
+const ProductDetail = lazy(
+  () => import("./page/User/page/Product/product-detail")
+);
 
 const Router = () => {
   return (
@@ -14,8 +17,9 @@ const Router = () => {
         <Route path="/" element={<User />}>
           <Route index element={<Product />} />
           <Route path="/men-fashion" element={<ManFashion />} />
-          <Route />
         </Route>
+        {/* Product Detail */}
+        <Route path="/detail/:id" element={<ProductDetail />} />
       </Routes>
     </Suspense>
   );
