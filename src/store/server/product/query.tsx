@@ -1,4 +1,4 @@
-import { useInfiniteQuery } from "@tanstack/react-query";
+import { keepPreviousData, useInfiniteQuery } from "@tanstack/react-query";
 import { axios } from "../../../api";
 import { getParams } from "../../../utils/getParams";
 import { productDataSchema } from "./schema";
@@ -17,6 +17,7 @@ export const useFetchAllQuery = () => {
   return useInfiniteQuery({
     queryKey: ["all-products"],
     queryFn: ({ pageParam }) => fetchAllProduct({ page: pageParam }),
+    placeholderData: keepPreviousData,
     getNextPageParam: (data, pages) => {
       return data.data.length !== 0 ? pages.length + 1 : undefined;
     },

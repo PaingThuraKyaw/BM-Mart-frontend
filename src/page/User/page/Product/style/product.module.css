@@ -1,0 +1,19 @@
+.hoverCard {
+  transition: all 0.3s;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 1px solid var(--mantine-color-dark-1);
+  }
+}
+
+.media {
+  @media (max-width: 500px) {
+    display: none;
+  }
+}
+
+.mediaSm {
+  @media (min-width: 501px) {
+    display: none;
+  }
+}

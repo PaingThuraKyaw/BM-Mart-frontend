@@ -24,7 +24,6 @@ const User = () => {
           <Grid.Col display={media ? "none" : ""} span={{ base: 12, md: 3 }}>
             <Box h={400} className={classes.categoryList}>
               {userCategory.map((user, idx) => {
-
                 return (
                   <NavLink
                     classNames={{

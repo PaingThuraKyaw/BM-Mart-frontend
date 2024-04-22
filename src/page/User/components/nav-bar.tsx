@@ -32,7 +32,7 @@ const UserNavbar = () => {
               placeholder="Search your shop"
               classNames={{ input: classes.navInput }}
             />
-            <Group className={classes.footer} align="center" gap={15}>
+            <Group  className={classes.footer} align="center" gap={15}>
               <UnstyledButton
                 style={{
                   display: media ? "flex" : "",
